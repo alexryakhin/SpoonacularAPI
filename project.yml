@@ -1,10 +1,10 @@
-name: OpenAPIClient
+name: SpoonacularAPIClient
 targets:
-  OpenAPIClient:
+  SpoonacularAPIClient:
     type: framework
     platform: iOS
     deploymentTarget: "11.0"
-    sources: [OpenAPIClient]
+    sources: [SpoonacularAPIClient]
     info:
       path: ./Info.plist
       version: 1.1

@@ -21,7 +21,7 @@ open class MenuItemsAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func autocompleteMenuItemSearch(query: String, number: Double? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AutocompleteMenuItemSearch200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func autocompleteMenuItemSearch(query: String, number: Double? = nil, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AutocompleteMenuItemSearch200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return autocompleteMenuItemSearchWithRequestBuilder(query: query, number: number).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -49,7 +49,7 @@ open class MenuItemsAPI {
      */
     open class func autocompleteMenuItemSearchWithRequestBuilder(query: String, number: Double? = nil) -> RequestBuilder<AutocompleteMenuItemSearch200Response> {
         let localVariablePath = "/food/menuItems/suggest"
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -64,7 +64,7 @@ open class MenuItemsAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AutocompleteMenuItemSearch200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AutocompleteMenuItemSearch200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -77,7 +77,7 @@ open class MenuItemsAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func getMenuItemInformation(id: Int, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetMenuItemInformation200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func getMenuItemInformation(id: Int, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetMenuItemInformation200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return getMenuItemInformationWithRequestBuilder(id: id).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -107,7 +107,7 @@ open class MenuItemsAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -118,7 +118,7 @@ open class MenuItemsAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetMenuItemInformation200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetMenuItemInformation200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -131,7 +131,7 @@ open class MenuItemsAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func menuItemNutritionByIDImage(id: Double, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func menuItemNutritionByIDImage(id: Double, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
         return menuItemNutritionByIDImageWithRequestBuilder(id: id).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -161,7 +161,7 @@ open class MenuItemsAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -172,7 +172,7 @@ open class MenuItemsAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -188,7 +188,7 @@ open class MenuItemsAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func menuItemNutritionLabelImage(id: Double, showOptionalNutrients: Bool? = nil, showZeroValues: Bool? = nil, showIngredients: Bool? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func menuItemNutritionLabelImage(id: Double, showOptionalNutrients: Bool? = nil, showZeroValues: Bool? = nil, showIngredients: Bool? = nil, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
         return menuItemNutritionLabelImageWithRequestBuilder(id: id, showOptionalNutrients: showOptionalNutrients, showZeroValues: showZeroValues, showIngredients: showIngredients).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -221,7 +221,7 @@ open class MenuItemsAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -237,7 +237,7 @@ open class MenuItemsAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -254,7 +254,7 @@ open class MenuItemsAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func menuItemNutritionLabelWidget(id: Double, defaultCss: Bool? = nil, showOptionalNutrients: Bool? = nil, showZeroValues: Bool? = nil, showIngredients: Bool? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: String?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func menuItemNutritionLabelWidget(id: Double, defaultCss: Bool? = nil, showOptionalNutrients: Bool? = nil, showZeroValues: Bool? = nil, showIngredients: Bool? = nil, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: String?, _ error: Error?) -> Void)) -> RequestTask {
         return menuItemNutritionLabelWidgetWithRequestBuilder(id: id, defaultCss: defaultCss, showOptionalNutrients: showOptionalNutrients, showZeroValues: showZeroValues, showIngredients: showIngredients).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -288,7 +288,7 @@ open class MenuItemsAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -305,7 +305,7 @@ open class MenuItemsAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -329,7 +329,7 @@ open class MenuItemsAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func searchMenuItems(query: String? = nil, minCalories: Double? = nil, maxCalories: Double? = nil, minCarbs: Double? = nil, maxCarbs: Double? = nil, minProtein: Double? = nil, maxProtein: Double? = nil, minFat: Double? = nil, maxFat: Double? = nil, addMenuItemInformation: Bool? = nil, offset: Int? = nil, number: Int? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: SearchMenuItems200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func searchMenuItems(query: String? = nil, minCalories: Double? = nil, maxCalories: Double? = nil, minCarbs: Double? = nil, maxCarbs: Double? = nil, minProtein: Double? = nil, maxProtein: Double? = nil, minFat: Double? = nil, maxFat: Double? = nil, addMenuItemInformation: Bool? = nil, offset: Int? = nil, number: Int? = nil, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: SearchMenuItems200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return searchMenuItemsWithRequestBuilder(query: query, minCalories: minCalories, maxCalories: maxCalories, minCarbs: minCarbs, maxCarbs: maxCarbs, minProtein: minProtein, maxProtein: maxProtein, minFat: minFat, maxFat: maxFat, addMenuItemInformation: addMenuItemInformation, offset: offset, number: number).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -367,7 +367,7 @@ open class MenuItemsAPI {
      */
     open class func searchMenuItemsWithRequestBuilder(query: String? = nil, minCalories: Double? = nil, maxCalories: Double? = nil, minCarbs: Double? = nil, maxCarbs: Double? = nil, minProtein: Double? = nil, maxProtein: Double? = nil, minFat: Double? = nil, maxFat: Double? = nil, addMenuItemInformation: Bool? = nil, offset: Int? = nil, number: Int? = nil) -> RequestBuilder<SearchMenuItems200Response> {
         let localVariablePath = "/food/menuItems/search"
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -392,7 +392,7 @@ open class MenuItemsAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<SearchMenuItems200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<SearchMenuItems200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -416,7 +416,7 @@ open class MenuItemsAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func visualizeMenuItemNutritionByID(id: Int, defaultCss: Bool? = nil, accept: Accept_visualizeMenuItemNutritionByID? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: String?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func visualizeMenuItemNutritionByID(id: Int, defaultCss: Bool? = nil, accept: Accept_visualizeMenuItemNutritionByID? = nil, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: String?, _ error: Error?) -> Void)) -> RequestTask {
         return visualizeMenuItemNutritionByIDWithRequestBuilder(id: id, defaultCss: defaultCss, accept: accept).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -448,7 +448,7 @@ open class MenuItemsAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -462,7 +462,7 @@ open class MenuItemsAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }

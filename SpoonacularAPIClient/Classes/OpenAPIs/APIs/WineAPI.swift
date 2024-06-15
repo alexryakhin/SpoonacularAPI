@@ -20,7 +20,7 @@ open class WineAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func getDishPairingForWine(wine: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetDishPairingForWine200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func getDishPairingForWine(wine: String, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetDishPairingForWine200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return getDishPairingForWineWithRequestBuilder(wine: wine).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -47,7 +47,7 @@ open class WineAPI {
      */
     open class func getDishPairingForWineWithRequestBuilder(wine: String) -> RequestBuilder<GetDishPairingForWine200Response> {
         let localVariablePath = "/food/wine/dishes"
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -61,7 +61,7 @@ open class WineAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetDishPairingForWine200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetDishPairingForWine200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -74,7 +74,7 @@ open class WineAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func getWineDescription(wine: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetWineDescription200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func getWineDescription(wine: String, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetWineDescription200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return getWineDescriptionWithRequestBuilder(wine: wine).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -101,7 +101,7 @@ open class WineAPI {
      */
     open class func getWineDescriptionWithRequestBuilder(wine: String) -> RequestBuilder<GetWineDescription200Response> {
         let localVariablePath = "/food/wine/description"
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -115,7 +115,7 @@ open class WineAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetWineDescription200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetWineDescription200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -129,7 +129,7 @@ open class WineAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func getWinePairing(food: String, maxPrice: Double? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetWinePairing200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func getWinePairing(food: String, maxPrice: Double? = nil, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetWinePairing200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return getWinePairingWithRequestBuilder(food: food, maxPrice: maxPrice).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -157,7 +157,7 @@ open class WineAPI {
      */
     open class func getWinePairingWithRequestBuilder(food: String, maxPrice: Double? = nil) -> RequestBuilder<GetWinePairing200Response> {
         let localVariablePath = "/food/wine/pairing"
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -172,7 +172,7 @@ open class WineAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetWinePairing200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetWinePairing200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -188,7 +188,7 @@ open class WineAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func getWineRecommendation(wine: String, maxPrice: Double? = nil, minRating: Double? = nil, number: Double? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetWineRecommendation200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func getWineRecommendation(wine: String, maxPrice: Double? = nil, minRating: Double? = nil, number: Double? = nil, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetWineRecommendation200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return getWineRecommendationWithRequestBuilder(wine: wine, maxPrice: maxPrice, minRating: minRating, number: number).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -218,7 +218,7 @@ open class WineAPI {
      */
     open class func getWineRecommendationWithRequestBuilder(wine: String, maxPrice: Double? = nil, minRating: Double? = nil, number: Double? = nil) -> RequestBuilder<GetWineRecommendation200Response> {
         let localVariablePath = "/food/wine/recommendation"
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -235,7 +235,7 @@ open class WineAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetWineRecommendation200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetWineRecommendation200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }

@@ -22,7 +22,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func addMealPlanTemplate(username: String, hash: String, addToMealPlanRequest: AddToMealPlanRequest, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AddMealPlanTemplate200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func addMealPlanTemplate(username: String, hash: String, addToMealPlanRequest: AddToMealPlanRequest, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AddMealPlanTemplate200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return addMealPlanTemplateWithRequestBuilder(username: username, hash: hash, addToMealPlanRequest: addToMealPlanRequest).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -54,7 +54,7 @@ open class MealPlanningAPI {
         let usernamePreEscape = "\(APIHelper.mapValueToPathItem(username))"
         let usernamePostEscape = usernamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{username}", with: usernamePostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: addToMealPlanRequest)
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -68,7 +68,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AddMealPlanTemplate200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AddMealPlanTemplate200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -83,7 +83,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func addToMealPlan(username: String, hash: String, addToMealPlanRequest: AddToMealPlanRequest, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func addToMealPlan(username: String, hash: String, addToMealPlanRequest: AddToMealPlanRequest, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
         return addToMealPlanWithRequestBuilder(username: username, hash: hash, addToMealPlanRequest: addToMealPlanRequest).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -115,7 +115,7 @@ open class MealPlanningAPI {
         let usernamePreEscape = "\(APIHelper.mapValueToPathItem(username))"
         let usernamePostEscape = usernamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{username}", with: usernamePostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: addToMealPlanRequest)
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -129,7 +129,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -144,7 +144,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func addToShoppingList(username: String, hash: String, addToMealPlanRequest: AddToMealPlanRequest, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GenerateShoppingList200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func addToShoppingList(username: String, hash: String, addToMealPlanRequest: AddToMealPlanRequest, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GenerateShoppingList200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return addToShoppingListWithRequestBuilder(username: username, hash: hash, addToMealPlanRequest: addToMealPlanRequest).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -176,7 +176,7 @@ open class MealPlanningAPI {
         let usernamePreEscape = "\(APIHelper.mapValueToPathItem(username))"
         let usernamePostEscape = usernamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{username}", with: usernamePostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: addToMealPlanRequest)
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -190,7 +190,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GenerateShoppingList200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GenerateShoppingList200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -206,7 +206,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func clearMealPlanDay(username: String, date: String, hash: String, clearMealPlanDayRequest: ClearMealPlanDayRequest, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func clearMealPlanDay(username: String, date: String, hash: String, clearMealPlanDayRequest: ClearMealPlanDayRequest, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
         return clearMealPlanDayWithRequestBuilder(username: username, date: date, hash: hash, clearMealPlanDayRequest: clearMealPlanDayRequest).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -242,7 +242,7 @@ open class MealPlanningAPI {
         let datePreEscape = "\(APIHelper.mapValueToPathItem(date))"
         let datePostEscape = datePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{date}", with: datePostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: clearMealPlanDayRequest)
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -256,7 +256,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "DELETE", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -269,7 +269,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func connectUser(body: AnyCodable, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: ConnectUser200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func connectUser(body: AnyCodable, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: ConnectUser200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return connectUserWithRequestBuilder(body: body).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -296,7 +296,7 @@ open class MealPlanningAPI {
      */
     open class func connectUserWithRequestBuilder(body: AnyCodable) -> RequestBuilder<ConnectUser200Response> {
         let localVariablePath = "/users/connect"
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -307,7 +307,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<ConnectUser200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<ConnectUser200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -323,7 +323,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func deleteFromMealPlan(username: String, id: Double, hash: String, deleteFromMealPlanRequest: DeleteFromMealPlanRequest, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func deleteFromMealPlan(username: String, id: Double, hash: String, deleteFromMealPlanRequest: DeleteFromMealPlanRequest, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
         return deleteFromMealPlanWithRequestBuilder(username: username, id: id, hash: hash, deleteFromMealPlanRequest: deleteFromMealPlanRequest).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -359,7 +359,7 @@ open class MealPlanningAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: deleteFromMealPlanRequest)
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -373,7 +373,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "DELETE", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -389,7 +389,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func deleteFromShoppingList(username: String, id: Int, hash: String, deleteFromMealPlanRequest: DeleteFromMealPlanRequest, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func deleteFromShoppingList(username: String, id: Int, hash: String, deleteFromMealPlanRequest: DeleteFromMealPlanRequest, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
         return deleteFromShoppingListWithRequestBuilder(username: username, id: id, hash: hash, deleteFromMealPlanRequest: deleteFromMealPlanRequest).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -425,7 +425,7 @@ open class MealPlanningAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: deleteFromMealPlanRequest)
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -439,7 +439,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "DELETE", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -455,7 +455,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func deleteMealPlanTemplate(username: String, id: Int, hash: String, deleteFromMealPlanRequest: DeleteFromMealPlanRequest, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func deleteMealPlanTemplate(username: String, id: Int, hash: String, deleteFromMealPlanRequest: DeleteFromMealPlanRequest, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
         return deleteMealPlanTemplateWithRequestBuilder(username: username, id: id, hash: hash, deleteFromMealPlanRequest: deleteFromMealPlanRequest).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -491,7 +491,7 @@ open class MealPlanningAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: deleteFromMealPlanRequest)
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -505,7 +505,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "DELETE", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -521,7 +521,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func generateMealPlan(timeFrame: String? = nil, targetCalories: Double? = nil, diet: String? = nil, exclude: String? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GenerateMealPlan200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func generateMealPlan(timeFrame: String? = nil, targetCalories: Double? = nil, diet: String? = nil, exclude: String? = nil, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GenerateMealPlan200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return generateMealPlanWithRequestBuilder(timeFrame: timeFrame, targetCalories: targetCalories, diet: diet, exclude: exclude).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -551,7 +551,7 @@ open class MealPlanningAPI {
      */
     open class func generateMealPlanWithRequestBuilder(timeFrame: String? = nil, targetCalories: Double? = nil, diet: String? = nil, exclude: String? = nil) -> RequestBuilder<GenerateMealPlan200Response> {
         let localVariablePath = "/mealplanner/generate"
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -568,7 +568,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GenerateMealPlan200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GenerateMealPlan200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -585,7 +585,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func generateShoppingList(username: String, startDate: String, endDate: String, hash: String, generateShoppingListRequest: GenerateShoppingListRequest, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GenerateShoppingList200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func generateShoppingList(username: String, startDate: String, endDate: String, hash: String, generateShoppingListRequest: GenerateShoppingListRequest, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GenerateShoppingList200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return generateShoppingListWithRequestBuilder(username: username, startDate: startDate, endDate: endDate, hash: hash, generateShoppingListRequest: generateShoppingListRequest).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -625,7 +625,7 @@ open class MealPlanningAPI {
         let endDatePreEscape = "\(APIHelper.mapValueToPathItem(endDate))"
         let endDatePostEscape = endDatePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{end-date}", with: endDatePostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: generateShoppingListRequest)
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -639,7 +639,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GenerateShoppingList200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GenerateShoppingList200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -654,7 +654,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func getMealPlanTemplate(username: String, id: Int, hash: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetMealPlanTemplate200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func getMealPlanTemplate(username: String, id: Int, hash: String, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetMealPlanTemplate200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return getMealPlanTemplateWithRequestBuilder(username: username, id: id, hash: hash).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -689,7 +689,7 @@ open class MealPlanningAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -703,7 +703,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetMealPlanTemplate200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetMealPlanTemplate200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -717,7 +717,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func getMealPlanTemplates(username: String, hash: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetMealPlanTemplates200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func getMealPlanTemplates(username: String, hash: String, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetMealPlanTemplates200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return getMealPlanTemplatesWithRequestBuilder(username: username, hash: hash).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -748,7 +748,7 @@ open class MealPlanningAPI {
         let usernamePreEscape = "\(APIHelper.mapValueToPathItem(username))"
         let usernamePostEscape = usernamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{username}", with: usernamePostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -762,7 +762,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetMealPlanTemplates200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetMealPlanTemplates200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -777,7 +777,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func getMealPlanWeek(username: String, startDate: String, hash: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetMealPlanWeek200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func getMealPlanWeek(username: String, startDate: String, hash: String, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetMealPlanWeek200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return getMealPlanWeekWithRequestBuilder(username: username, startDate: startDate, hash: hash).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -812,7 +812,7 @@ open class MealPlanningAPI {
         let startDatePreEscape = "\(APIHelper.mapValueToPathItem(startDate))"
         let startDatePostEscape = startDatePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{start-date}", with: startDatePostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -826,7 +826,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetMealPlanWeek200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetMealPlanWeek200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -840,7 +840,7 @@ open class MealPlanningAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func getShoppingList(username: String, hash: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetShoppingList200Response?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func getShoppingList(username: String, hash: String, apiResponseQueue: DispatchQueue = SpoonacularAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetShoppingList200Response?, _ error: Error?) -> Void)) -> RequestTask {
         return getShoppingListWithRequestBuilder(username: username, hash: hash).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -871,7 +871,7 @@ open class MealPlanningAPI {
         let usernamePreEscape = "\(APIHelper.mapValueToPathItem(username))"
         let usernamePostEscape = usernamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{username}", with: usernamePostEscape, options: .literal, range: nil)
-        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -885,7 +885,7 @@ open class MealPlanningAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetShoppingList200Response>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetShoppingList200Response>.Type = SpoonacularAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }

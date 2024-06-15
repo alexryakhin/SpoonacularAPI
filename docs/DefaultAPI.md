@@ -21,7 +21,7 @@ This endpoint allows you to send raw recipe information, such as title, servings
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let analyzeRecipeRequest = analyzeRecipe_request(language: "language_example", includeNutrition: false, includeTaste: false) // AnalyzeRecipeRequest | Example request body.
 let language = "language_example" // String | The input language, either \"en\" or \"de\". (optional)
@@ -77,7 +77,7 @@ Generate a recipe card for a recipe.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Double | The recipe id.
 let mask = "mask_example" // String | The mask to put over the recipe image (\"ellipseMask\", \"diamondMask\", \"starMask\", \"heartMask\", \"potMask\", \"fishMask\"). (optional)
@@ -135,7 +135,7 @@ Search through thousands of restaurants (in North America) by location, cuisine,
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let query = "query_example" // String | The search query. (optional)
 let lat = 987 // Double | The latitude of the user's location. (optional)

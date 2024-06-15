@@ -25,7 +25,7 @@ Generate suggestions for menu items based on a (partial) query. The matches will
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let query = "query_example" // String | The (partial) search query.
 let number = 987 // Double | The number of results to return (between 1 and 25). (optional)
@@ -77,7 +77,7 @@ Use a menu item id to get all available information about a menu item, such as n
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 
@@ -127,7 +127,7 @@ Visualize a menu item's nutritional information as HTML including CSS.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Double | The menu item id.
 
@@ -177,7 +177,7 @@ Visualize a menu item's nutritional label information as an image.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Double | The menu item id.
 let showOptionalNutrients = false // Bool | Whether to show optional nutrients. (optional)
@@ -233,7 +233,7 @@ Visualize a menu item's nutritional label information as HTML including CSS.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Double | The menu item id.
 let defaultCss = false // Bool | Whether the default CSS should be added to the response. (optional) (default to true)
@@ -291,7 +291,7 @@ Search over 115,000 menu items from over 800 fast food and chain restaurants. Fo
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let query = "query_example" // String | The (natural language) search query. (optional)
 let minCalories = 987 // Double | The minimum amount of calories the menu item must have. (optional)
@@ -363,7 +363,7 @@ Visualize a menu item's nutritional information as HTML including CSS.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 let defaultCss = false // Bool | Whether the default CSS should be added to the response. (optional) (default to true)

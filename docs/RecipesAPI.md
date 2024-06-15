@@ -59,7 +59,7 @@ Parse a recipe search query to find out its intention.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let q = "q_example" // String | The recipe search query.
 
@@ -109,7 +109,7 @@ This endpoint allows you to break down instructions into atomic steps. Furthermo
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let contentType = "contentType_example" // String | The content type. (optional)
 
@@ -159,7 +159,7 @@ Autocomplete a partial input to suggest possible recipe names.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let query = "query_example" // String | The (natural language) search query. (optional)
 let number = 987 // Int | The maximum number of items to return (between 1 and 100). Defaults to 10. (optional) (default to 10)
@@ -211,7 +211,7 @@ Classify the recipe's cuisine.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let contentType = "contentType_example" // String | The content type. (optional)
 
@@ -261,7 +261,7 @@ Retrieve the glycemic index for a list of ingredients and compute the individual
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let computeGlycemicLoadRequest = computeGlycemicLoad_request(ingredients: ["ingredients_example"]) // ComputeGlycemicLoadRequest | 
 let language = "language_example" // String | The language of the input. Either 'en' or 'de'. (optional)
@@ -313,7 +313,7 @@ Convert amounts like \"2 cups of flour to grams\".
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let ingredientName = "ingredientName_example" // String | The ingredient which you want to convert.
 let sourceAmount = 987 // Double | The amount from which you want to convert, e.g. the 2.5 in \"2.5 cups of flour to grams\".
@@ -369,7 +369,7 @@ Generate a recipe card for a recipe.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let contentType = "contentType_example" // String | The content type. (optional)
 
@@ -419,7 +419,7 @@ Visualize a recipe's equipment list as an image.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Double | The recipe id.
 
@@ -469,7 +469,7 @@ This endpoint lets you extract recipe data such as title, ingredients, and instr
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let url = "url_example" // String | The URL of the recipe page.
 let forceExtraction = true // Bool | If true, the extraction will be triggered whether we already know the recipe or not. Use this only if information is missing as this operation is slower. (optional)
@@ -527,7 +527,7 @@ Get an analyzed breakdown of a recipe's instructions. Each step is enriched with
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 let stepBreakdown = true // Bool | Whether to break down the recipe steps even more. (optional)
@@ -579,7 +579,7 @@ Find random (popular) recipes. If you need to filter recipes by diet, nutrition 
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let limitLicense = true // Bool | Whether the recipes should have an open license that allows display with proper attribution. (optional) (default to true)
 let tags = "tags_example" // String | The tags (can be diets, meal types, cuisines, or intolerances) that the recipe must have. (optional)
@@ -633,7 +633,7 @@ Get a recipe's equipment list.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 
@@ -683,7 +683,7 @@ Use a recipe id to get full information about a recipe, such as ingredients, nut
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 let includeNutrition = true // Bool | Include nutrition data in the recipe information. Nutrition data is per serving. If you want the nutrition data for the entire recipe, just multiply by the number of servings. (optional) (default to false)
@@ -735,7 +735,7 @@ Get information about multiple recipes at once. This is equivalent to calling th
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let ids = "ids_example" // String | A comma-separated list of recipe ids.
 let includeNutrition = true // Bool | Include nutrition data in the recipe information. Nutrition data is per serving. If you want the nutrition data for the entire recipe, just multiply by the number of servings. (optional) (default to false)
@@ -787,7 +787,7 @@ Get a recipe's ingredient list.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 
@@ -837,7 +837,7 @@ Get a recipe's nutrition data.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 
@@ -887,7 +887,7 @@ Get a recipe's price breakdown data.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 
@@ -937,7 +937,7 @@ Get a recipe's taste. The tastes supported are sweet, salty, sour, bitter, savor
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 let normalize = true // Bool | Normalize to the strongest taste. (optional) (default to true)
@@ -989,7 +989,7 @@ Find recipes which are similar to the given one.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 let number = 987 // Int | The maximum number of items to return (between 1 and 100). Defaults to 10. (optional) (default to 10)
@@ -1043,7 +1043,7 @@ Estimate the macronutrients of a dish based on its title.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let title = "title_example" // String | The title of the dish.
 
@@ -1093,7 +1093,7 @@ Visualize a recipe's ingredient list.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Double | The recipe id.
 let measure = "measure_example" // String | Whether the the measures should be 'us' or 'metric'. (optional)
@@ -1145,7 +1145,7 @@ Extract an ingredient from plain text.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let contentType = "contentType_example" // String | The content type. (optional)
 let language = "language_example" // String | The language of the input. Either 'en' or 'de'. (optional)
@@ -1197,7 +1197,7 @@ Visualize a recipe's price breakdown.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Double | The recipe id.
 
@@ -1247,7 +1247,7 @@ Answer a nutrition related natural language question.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let q = "q_example" // String | The nutrition related question.
 
@@ -1297,7 +1297,7 @@ Visualize a recipe's nutritional information as an image.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Double | The recipe id.
 
@@ -1347,7 +1347,7 @@ Get a recipe's nutrition label as an image.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Double | The recipe id.
 let showOptionalNutrients = false // Bool | Whether to show optional nutrients. (optional)
@@ -1403,7 +1403,7 @@ Get a recipe's nutrition label as an HTML widget.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Double | The recipe id.
 let defaultCss = false // Bool | Whether the default CSS should be added to the response. (optional) (default to true)
@@ -1461,7 +1461,7 @@ Get a recipe's taste as an image. The tastes supported are sweet, salty, sour, b
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Double | The recipe id.
 let normalize = false // Bool | Normalize to the strongest taste. (optional)
@@ -1515,7 +1515,7 @@ Search through hundreds of thousands of recipes using advanced filtering and ran
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let query = "query_example" // String | The (natural language) search query. (optional)
 let cuisine = "cuisine_example" // String | The cuisine(s) of the recipes. One or more, comma separated (will be interpreted as 'OR'). See a full list of supported cuisines. (optional)
@@ -1755,7 +1755,7 @@ Search Recipes by Ingredients
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let ingredients = "ingredients_example" // String | A comma-separated list of ingredients that the recipes should contain. (optional)
 let number = 987 // Int | The maximum number of items to return (between 1 and 100). Defaults to 10. (optional) (default to 10)
@@ -1813,7 +1813,7 @@ Find a set of recipes that adhere to the given nutritional limits. You may set l
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let minCarbs = 987 // Double | The minimum amount of carbohydrates in grams the recipe must have. (optional)
 let maxCarbs = 987 // Double | The maximum amount of carbohydrates in grams the recipe can have. (optional)
@@ -2013,7 +2013,7 @@ Automatically generate a short description that summarizes key information about
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 
@@ -2063,7 +2063,7 @@ Visualize the equipment used to make a recipe.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let contentType = "contentType_example" // String | The content type. (optional)
 let accept = "accept_example" // String | Accept header. (optional)
@@ -2115,7 +2115,7 @@ Visualize the price breakdown of a recipe.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let contentType = "contentType_example" // String | The content type. (optional)
 let accept = "accept_example" // String | Accept header. (optional)
@@ -2169,7 +2169,7 @@ Visualize a recipe's equipment list.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 let defaultCss = false // Bool | Whether the default CSS should be added to the response. (optional) (default to true)
@@ -2221,7 +2221,7 @@ Visualize a recipe's ingredient list.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 let defaultCss = false // Bool | Whether the default CSS should be added to the response. (optional) (default to true)
@@ -2275,7 +2275,7 @@ Visualize a recipe's nutritional information as HTML including CSS.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let contentType = "contentType_example" // String | The content type. (optional)
 let accept = "accept_example" // String | Accept header. (optional)
@@ -2329,7 +2329,7 @@ Visualize a recipe's nutritional information as HTML including CSS.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 let defaultCss = false // Bool | Whether the default CSS should be added to the response. (optional) (default to true)
@@ -2383,7 +2383,7 @@ Visualize a recipe's price breakdown.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 let defaultCss = false // Bool | Whether the default CSS should be added to the response. (optional) (default to true)
@@ -2435,7 +2435,7 @@ Visualize a recipe's taste information as HTML including CSS. You can play aroun
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let language = "language_example" // String | The language of the input. Either 'en' or 'de'. (optional)
 let contentType = "contentType_example" // String | The content type. (optional)
@@ -2493,7 +2493,7 @@ Get a recipe's taste. The tastes supported are sweet, salty, sour, bitter, savor
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import OpenAPIClient
+import SpoonacularAPIClient
 
 let id = 987 // Int | The item's id.
 let normalize = true // Bool | Whether to normalize to the strongest taste. (optional) (default to true)
