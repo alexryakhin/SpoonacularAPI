@@ -29,7 +29,7 @@ Generate suggestions for grocery products based on a (partial) query. The matche
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let query = "query_example" // String | The (partial) search query.
 let number = 987 // Int | The number of results to return (between 1 and 25). (optional)
@@ -81,7 +81,7 @@ This endpoint allows you to match a packaged food to a basic category, e.g. a sp
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let classifyGroceryProductRequest = classifyGroceryProduct_request(title: "title_example", upc: "upc_example", pluCode: "pluCode_example") // ClassifyGroceryProductRequest | 
 let locale = "locale_example" // String | The display name of the returned category, supported is en_US (for American English) and en_GB (for British English). (optional)
@@ -133,7 +133,7 @@ Provide a set of product jsons, get back classified products.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let classifyGroceryProductBulkRequestInner = [classifyGroceryProductBulk_request_inner(title: "title_example", upc: "upc_example", pluCode: "pluCode_example")] // Set<ClassifyGroceryProductBulkRequestInner> | 
 let locale = "locale_example" // String | The display name of the returned category, supported is en_US (for American English) and en_GB (for British English). (optional)
@@ -185,7 +185,7 @@ Find comparable products to the given one.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let upc = 987 // Double | The UPC of the product for which you want to find comparable products.
 
@@ -235,7 +235,7 @@ Use a product id to get full information about a product, such as ingredients, n
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let id = 987 // Int | The item's id.
 
@@ -285,7 +285,7 @@ Visualize a product's nutritional information as an image.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let id = 987 // Double | The id of the product.
 
@@ -335,7 +335,7 @@ Get a product's nutrition label as an image.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let id = 987 // Double | The product id.
 let showOptionalNutrients = false // Bool | Whether to show optional nutrients. (optional)
@@ -391,7 +391,7 @@ Get a product's nutrition label as an HTML widget.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let id = 987 // Double | The product id.
 let defaultCss = false // Bool | Whether the default CSS should be added to the response. (optional) (default to true)
@@ -449,7 +449,7 @@ Search packaged food products, such as frozen pizza or Greek yogurt.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let query = "query_example" // String | The (natural language) search query. (optional)
 let minCalories = 987 // Double | The minimum amount of calories the product must have. (optional)
@@ -521,7 +521,7 @@ Get information about a packaged food using its UPC.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let upc = 987 // Double | The product's UPC.
 
@@ -571,7 +571,7 @@ Visualize a product's nutritional information as HTML including CSS.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let id = 987 // Int | The item's id.
 let defaultCss = false // Bool | Whether the default CSS should be added to the response. (optional) (default to true)

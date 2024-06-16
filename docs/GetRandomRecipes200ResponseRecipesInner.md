@@ -17,18 +17,14 @@ Name | Type | Description | Notes
 **healthScore** | **Double** |  | 
 **spoonacularScore** | **Double** |  | 
 **pricePerServing** | **Double** |  | 
-**analyzedInstructions** | **[AnyCodable]** |  | [optional] 
 **cheap** | **Bool** |  | 
 **creditsText** | **String** |  | 
-**cuisines** | **[String]** |  | [optional] 
 **dairyFree** | **Bool** |  | 
-**diets** | **[String]** |  | [optional] 
 **gaps** | **String** |  | 
 **glutenFree** | **Bool** |  | 
 **instructions** | **String** |  | 
 **ketogenic** | **Bool** |  | 
 **lowFodmap** | **Bool** |  | 
-**occasions** | **[String]** |  | [optional] 
 **sustainable** | **Bool** |  | 
 **vegan** | **Bool** |  | 
 **vegetarian** | **Bool** |  | 
@@ -36,9 +32,13 @@ Name | Type | Description | Notes
 **veryPopular** | **Bool** |  | 
 **whole30** | **Bool** |  | 
 **weightWatcherSmartPoints** | **Double** |  | 
+**summary** | **String** |  | 
+**analyzedInstructions** | **[AnyCodable]** |  | [optional] 
+**cuisines** | **[String]** |  | [optional] 
+**diets** | **[String]** |  | [optional] 
+**occasions** | **[String]** |  | [optional] 
 **dishTypes** | **[String]** |  | [optional] 
 **extendedIngredients** | Set<GetRecipeInformation200ResponseExtendedIngredientsInner> |  | [optional] 
-**summary** | **String** |  | 
 **winePairing** | [**GetRecipeInformation200ResponseWinePairing**](GetRecipeInformation200ResponseWinePairing.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

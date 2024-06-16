@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **badges** | **[String]** |  | 
 **importantBadges** | **[String]** |  | 
 **ingredientCount** | **Int** |  | 
-**generatedText** | **AnyCodable** |  | [optional] 
 **ingredientList** | **String** |  | 
 **ingredients** | [GetProductInformation200ResponseIngredientsInner] |  | 
 **likes** | **Double** |  | 
@@ -19,6 +18,7 @@ Name | Type | Description | Notes
 **price** | **Double** |  | 
 **servings** | [**SearchGroceryProductsByUPC200ResponseServings**](SearchGroceryProductsByUPC200ResponseServings.md) |  | 
 **spoonacularScore** | **Double** |  | 
+**generatedText** | **AnyCodable** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

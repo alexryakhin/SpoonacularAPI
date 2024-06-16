@@ -9,10 +9,10 @@ Name | Type | Description | Notes
 **nutrition** | [**SearchGroceryProductsByUPC200ResponseNutrition**](SearchGroceryProductsByUPC200ResponseNutrition.md) |  | 
 **badges** | **[String]** |  | 
 **breadcrumbs** | **[String]** |  | 
-**generatedText** | **String** |  | [optional] 
 **imageType** | **String** |  | 
 **likes** | **Double** |  | 
 **servings** | [**SearchGroceryProductsByUPC200ResponseServings**](SearchGroceryProductsByUPC200ResponseServings.md) |  | 
+**generatedText** | **String** |  | [optional] 
 **price** | **Double** |  | [optional] 
 **spoonacularScore** | **Double** |  | [optional] 
 

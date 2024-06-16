@@ -27,7 +27,7 @@ Autocomplete the entry of an ingredient.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let query = "query_example" // String | The (natural language) search query. (optional)
 let number = 987 // Int | The maximum number of items to return (between 1 and 100). Defaults to 10. (optional) (default to 10)
@@ -85,7 +85,7 @@ Compute the amount you need of a certain ingredient for a certain nutritional go
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let id = 987 // Double | The id of the ingredient you want the amount for.
 let nutrient = "nutrient_example" // String | The target nutrient. See a list of supported nutrients.
@@ -141,7 +141,7 @@ Use an ingredient id to get all available information about an ingredient, such 
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let id = 987 // Int | The item's id.
 let amount = 987 // Double | The amount of this ingredient. (optional)
@@ -195,7 +195,7 @@ Search for substitutes for a given ingredient.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let ingredientName = "ingredientName_example" // String | The name of the ingredient you want to replace.
 
@@ -245,7 +245,7 @@ Search for substitutes for a given ingredient.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let id = 987 // Int | The item's id.
 
@@ -295,7 +295,7 @@ Search for simple whole foods (e.g. fruits, vegetables, nuts, grains, meat, fish
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let query = "query_example" // String | The (natural language) search query. (optional)
 let addChildren = true // Bool | Whether to add children of found foods. (optional)
@@ -373,7 +373,7 @@ Visualize a recipe's ingredient list.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let id = 987 // Double | The recipe id.
 let measure = "measure_example" // String | Whether the the measures should be 'us' or 'metric'. (optional)
@@ -425,7 +425,7 @@ Map a set of ingredients to products you can buy in the grocery store.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let mapIngredientsToGroceryProductsRequest = mapIngredientsToGroceryProducts_request(ingredients: ["ingredients_example"], servings: 123) // MapIngredientsToGroceryProductsRequest | 
 
@@ -475,7 +475,7 @@ Visualize ingredients of a recipe. You can play around with that endpoint!
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let contentType = "contentType_example" // String | The content type. (optional)
 let language = "language_example" // String | The language of the input. Either 'en' or 'de'. (optional)

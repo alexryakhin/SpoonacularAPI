@@ -8,12 +8,12 @@ Name | Type | Description | Notes
 **consitency** | **String** |  | 
 **id** | **Int** |  | 
 **image** | **String** |  | 
-**measures** | [**GetRecipeInformation200ResponseExtendedIngredientsInnerMeasures**](GetRecipeInformation200ResponseExtendedIngredientsInnerMeasures.md) |  | [optional] 
-**meta** | **[String]** |  | [optional] 
 **name** | **String** |  | 
 **original** | **String** |  | 
 **originalName** | **String** |  | 
 **unit** | **String** |  | 
+**measures** | [**GetRecipeInformation200ResponseExtendedIngredientsInnerMeasures**](GetRecipeInformation200ResponseExtendedIngredientsInnerMeasures.md) |  | [optional] 
+**meta** | **[String]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

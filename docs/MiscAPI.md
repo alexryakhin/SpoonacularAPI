@@ -29,7 +29,7 @@ Take any text and find all mentions of food contained within it. This task is al
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let contentType = "contentType_example" // String | The content type. (optional)
 
@@ -79,7 +79,7 @@ Get a random joke that is related to food. Caution: this is an endpoint for adul
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 
 // Random Food Joke
@@ -125,7 +125,7 @@ This endpoint returns suggestions for things the user can say or ask the chatbot
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let query = "query_example" // String | A (partial) query from the user. The endpoint will return if it matches topics it can talk about.
 let number = 987 // Double | The number of suggestions to return (between 1 and 25). (optional)
@@ -177,7 +177,7 @@ Returns random food trivia.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 
 // Random Food Trivia
@@ -223,7 +223,7 @@ Analyze a food image. The API tries to classify the image, guess the nutrition, 
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let imageUrl = "imageUrl_example" // String | The URL of the image to be analyzed.
 
@@ -273,7 +273,7 @@ Classify a food image.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let imageUrl = "imageUrl_example" // String | The URL of the image to be classified.
 
@@ -323,7 +323,7 @@ Search all food content with one call. That includes recipes, grocery products, 
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let query = "query_example" // String | The search query.
 let offset = 987 // Int | The number of results to skip (between 0 and 900). (optional)
@@ -377,7 +377,7 @@ Search custom foods in a user's account.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let username = "username_example" // String | The username.
 let hash = "hash_example" // String | The private hash for the username.
@@ -435,7 +435,7 @@ Find recipe and other food related videos.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let query = "query_example" // String | The (natural language) search query. (optional)
 let type = "type_example" // String | The type of the recipes. See a full list of supported meal types. (optional)
@@ -503,7 +503,7 @@ Search spoonacular's site content. You'll be able to find everything that you co
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let query = "query_example" // String | The query to search for. You can also use partial queries such as \"spagh\" to already find spaghetti recipes, articles, grocery products, and other content.
 
@@ -553,7 +553,7 @@ This endpoint can be used to have a conversation about food with the spoonacular
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPIClient
+import SpoonacularAPI
 
 let text = "text_example" // String | The request / question / answer from the user to the chatbot.
 let contextId = "contextId_example" // String | An arbitrary globally unique id for your conversation. The conversation can contain states so you should pass your context id if you want the bot to be able to remember the conversation. (optional)

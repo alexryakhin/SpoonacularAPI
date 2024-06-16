@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 **amount** | **Double** |  | 
 **id** | **Int** |  | 
 **image** | **String** |  | 
-**meta** | **[String]** |  | [optional] 
 **name** | **String** |  | 
 **original** | **String** |  | 
 **originalName** | **String** |  | 
 **unit** | **String** |  | 
 **unitLong** | **String** |  | 
 **unitShort** | **String** |  | 
+**meta** | **[String]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
