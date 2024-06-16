@@ -12,21 +12,21 @@ import AnyCodable
 
 public struct GetConversationSuggests200ResponseSuggests: Codable, JSONEncodable, Hashable {
 
-    public var _: Set<GetConversationSuggests200ResponseSuggestsInner>
+    public var suggestsSet: Set<GetConversationSuggests200ResponseSuggestsInner>
 
-    public init(_: Set<GetConversationSuggests200ResponseSuggestsInner>) {
-        self._ = _
+    public init(suggestsSet: Set<GetConversationSuggests200ResponseSuggestsInner>) {
+        self.suggestsSet = suggestsSet
     }
 
     public enum CodingKeys: String, CodingKey, CaseIterable {
-        case _
+        case suggestsSet = "_"
     }
 
     // Encodable protocol methods
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(_, forKey: ._)
+        try container.encode(suggestsSet, forKey: .suggestsSet)
     }
 }
 
