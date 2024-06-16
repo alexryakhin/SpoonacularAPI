@@ -39,7 +39,7 @@ open class RecipesAPI {
      */
     open class func analyzeARecipeSearchQueryWithRequestBuilder(q: String) -> RequestBuilder<AnalyzeARecipeSearchQuery200Response> {
         let localVariablePath = "/recipes/queries/analyze"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -53,7 +53,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnalyzeARecipeSearchQuery200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnalyzeARecipeSearchQuery200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -94,7 +94,7 @@ open class RecipesAPI {
      */
     open class func analyzeRecipeInstructionsWithRequestBuilder(contentType: ContentType_analyzeRecipeInstructions? = nil) -> RequestBuilder<AnalyzeRecipeInstructions200Response> {
         let localVariablePath = "/recipes/analyzeInstructions"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -106,7 +106,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnalyzeRecipeInstructions200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnalyzeRecipeInstructions200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -140,7 +140,7 @@ open class RecipesAPI {
      */
     open class func autocompleteRecipeSearchWithRequestBuilder(query: String? = nil, number: Int? = nil) -> RequestBuilder<Set<AutocompleteRecipeSearch200ResponseInner>> {
         let localVariablePath = "/recipes/autocomplete"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -155,7 +155,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<Set<AutocompleteRecipeSearch200ResponseInner>>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Set<AutocompleteRecipeSearch200ResponseInner>>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -196,7 +196,7 @@ open class RecipesAPI {
      */
     open class func classifyCuisineWithRequestBuilder(contentType: ContentType_classifyCuisine? = nil) -> RequestBuilder<ClassifyCuisine200Response> {
         let localVariablePath = "/recipes/cuisine"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -208,7 +208,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<ClassifyCuisine200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<ClassifyCuisine200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -250,7 +250,7 @@ open class RecipesAPI {
      */
     open class func computeGlycemicLoadWithRequestBuilder(computeGlycemicLoadRequest: ComputeGlycemicLoadRequest, language: Language_computeGlycemicLoad? = nil) -> RequestBuilder<ComputeGlycemicLoad200Response> {
         let localVariablePath = "/food/ingredients/glycemicLoad"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: computeGlycemicLoadRequest)
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -264,7 +264,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<ComputeGlycemicLoad200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<ComputeGlycemicLoad200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -302,7 +302,7 @@ open class RecipesAPI {
      */
     open class func convertAmountsWithRequestBuilder(ingredientName: String, sourceAmount: Double, sourceUnit: String, targetUnit: String) -> RequestBuilder<ConvertAmounts200Response> {
         let localVariablePath = "/recipes/convert"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -319,7 +319,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<ConvertAmounts200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<ConvertAmounts200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -360,7 +360,7 @@ open class RecipesAPI {
      */
     open class func createRecipeCardWithRequestBuilder(contentType: ContentType_createRecipeCard? = nil) -> RequestBuilder<CreateRecipeCard200Response> {
         let localVariablePath = "/recipes/visualizeRecipe"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -372,7 +372,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<CreateRecipeCard200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<CreateRecipeCard200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -407,7 +407,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -418,7 +418,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -458,7 +458,7 @@ open class RecipesAPI {
      */
     open class func extractRecipeFromWebsiteWithRequestBuilder(url: String, forceExtraction: Bool? = nil, analyze: Bool? = nil, includeNutrition: Bool? = nil, includeTaste: Bool? = nil) -> RequestBuilder<GetRecipeInformation200Response> {
         let localVariablePath = "/recipes/extract"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -476,7 +476,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetRecipeInformation200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetRecipeInformation200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -513,7 +513,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -527,7 +527,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetAnalyzedRecipeInstructions200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetAnalyzedRecipeInstructions200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -563,7 +563,7 @@ open class RecipesAPI {
      */
     open class func getRandomRecipesWithRequestBuilder(limitLicense: Bool? = nil, tags: String? = nil, number: Int? = nil) -> RequestBuilder<GetRandomRecipes200Response> {
         let localVariablePath = "/recipes/random"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -579,7 +579,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetRandomRecipes200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetRandomRecipes200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -614,7 +614,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -625,7 +625,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetRecipeEquipmentByID200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetRecipeEquipmentByID200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -662,7 +662,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -676,7 +676,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetRecipeInformation200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetRecipeInformation200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -710,7 +710,7 @@ open class RecipesAPI {
      */
     open class func getRecipeInformationBulkWithRequestBuilder(ids: String, includeNutrition: Bool? = nil) -> RequestBuilder<Set<GetRecipeInformationBulk200ResponseInner>> {
         let localVariablePath = "/recipes/informationBulk"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -725,7 +725,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<Set<GetRecipeInformationBulk200ResponseInner>>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Set<GetRecipeInformationBulk200ResponseInner>>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -760,7 +760,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -771,7 +771,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetRecipeIngredientsByID200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetRecipeIngredientsByID200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -806,7 +806,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -817,7 +817,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetRecipeNutritionWidgetByID200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetRecipeNutritionWidgetByID200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -852,7 +852,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -863,7 +863,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetRecipePriceBreakdownByID200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetRecipePriceBreakdownByID200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -900,7 +900,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -914,7 +914,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetRecipeTasteByID200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetRecipeTasteByID200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -953,7 +953,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -968,7 +968,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<Set<GetSimilarRecipes200ResponseInner>>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Set<GetSimilarRecipes200ResponseInner>>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -1000,7 +1000,7 @@ open class RecipesAPI {
      */
     open class func guessNutritionByDishNameWithRequestBuilder(title: String) -> RequestBuilder<GuessNutritionByDishName200Response> {
         let localVariablePath = "/recipes/guessNutrition"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -1014,7 +1014,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GuessNutritionByDishName200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GuessNutritionByDishName200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -1059,7 +1059,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -1073,7 +1073,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -1124,7 +1124,7 @@ open class RecipesAPI {
      */
     open class func parseIngredientsWithRequestBuilder(contentType: ContentType_parseIngredients? = nil, language: Language_parseIngredients? = nil) -> RequestBuilder<Set<ParseIngredients200ResponseInner>> {
         let localVariablePath = "/recipes/parseIngredients"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -1139,7 +1139,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<Set<ParseIngredients200ResponseInner>>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Set<ParseIngredients200ResponseInner>>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -1174,7 +1174,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -1185,7 +1185,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -1217,7 +1217,7 @@ open class RecipesAPI {
      */
     open class func quickAnswerWithRequestBuilder(q: String) -> RequestBuilder<QuickAnswer200Response> {
         let localVariablePath = "/recipes/quickAnswer"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -1231,7 +1231,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<QuickAnswer200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<QuickAnswer200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -1266,7 +1266,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -1277,7 +1277,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -1318,7 +1318,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -1334,7 +1334,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -1377,7 +1377,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -1394,7 +1394,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -1433,7 +1433,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -1448,7 +1448,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -1670,7 +1670,7 @@ open class RecipesAPI {
      */
     open class func searchRecipesWithRequestBuilder(query: String? = nil, cuisine: String? = nil, excludeCuisine: String? = nil, diet: String? = nil, intolerances: String? = nil, equipment: String? = nil, includeIngredients: String? = nil, excludeIngredients: String? = nil, type: String? = nil, instructionsRequired: Bool? = nil, fillIngredients: Bool? = nil, addRecipeInformation: Bool? = nil, addRecipeNutrition: Bool? = nil, author: String? = nil, tags: String? = nil, recipeBoxId: Double? = nil, titleMatch: String? = nil, maxReadyTime: Double? = nil, ignorePantry: Bool? = nil, sort: String? = nil, sortDirection: String? = nil, minCarbs: Double? = nil, maxCarbs: Double? = nil, minProtein: Double? = nil, maxProtein: Double? = nil, minCalories: Double? = nil, maxCalories: Double? = nil, minFat: Double? = nil, maxFat: Double? = nil, minAlcohol: Double? = nil, maxAlcohol: Double? = nil, minCaffeine: Double? = nil, maxCaffeine: Double? = nil, minCopper: Double? = nil, maxCopper: Double? = nil, minCalcium: Double? = nil, maxCalcium: Double? = nil, minCholine: Double? = nil, maxCholine: Double? = nil, minCholesterol: Double? = nil, maxCholesterol: Double? = nil, minFluoride: Double? = nil, maxFluoride: Double? = nil, minSaturatedFat: Double? = nil, maxSaturatedFat: Double? = nil, minVitaminA: Double? = nil, maxVitaminA: Double? = nil, minVitaminC: Double? = nil, maxVitaminC: Double? = nil, minVitaminD: Double? = nil, maxVitaminD: Double? = nil, minVitaminE: Double? = nil, maxVitaminE: Double? = nil, minVitaminK: Double? = nil, maxVitaminK: Double? = nil, minVitaminB1: Double? = nil, maxVitaminB1: Double? = nil, minVitaminB2: Double? = nil, maxVitaminB2: Double? = nil, minVitaminB5: Double? = nil, maxVitaminB5: Double? = nil, minVitaminB3: Double? = nil, maxVitaminB3: Double? = nil, minVitaminB6: Double? = nil, maxVitaminB6: Double? = nil, minVitaminB12: Double? = nil, maxVitaminB12: Double? = nil, minFiber: Double? = nil, maxFiber: Double? = nil, minFolate: Double? = nil, maxFolate: Double? = nil, minFolicAcid: Double? = nil, maxFolicAcid: Double? = nil, minIodine: Double? = nil, maxIodine: Double? = nil, minIron: Double? = nil, maxIron: Double? = nil, minMagnesium: Double? = nil, maxMagnesium: Double? = nil, minManganese: Double? = nil, maxManganese: Double? = nil, minPhosphorus: Double? = nil, maxPhosphorus: Double? = nil, minPotassium: Double? = nil, maxPotassium: Double? = nil, minSelenium: Double? = nil, maxSelenium: Double? = nil, minSodium: Double? = nil, maxSodium: Double? = nil, minSugar: Double? = nil, maxSugar: Double? = nil, minZinc: Double? = nil, maxZinc: Double? = nil, offset: Int? = nil, number: Int? = nil, limitLicense: Bool? = nil) -> RequestBuilder<SearchRecipes200Response> {
         let localVariablePath = "/recipes/complexSearch"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -1779,7 +1779,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<SearchRecipes200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<SearchRecipes200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -1819,7 +1819,7 @@ open class RecipesAPI {
      */
     open class func searchRecipesByIngredientsWithRequestBuilder(ingredients: String? = nil, number: Int? = nil, limitLicense: Bool? = nil, ranking: Double? = nil, ignorePantry: Bool? = nil) -> RequestBuilder<Set<SearchRecipesByIngredients200ResponseInner>> {
         let localVariablePath = "/recipes/findByIngredients"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -1837,7 +1837,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<Set<SearchRecipesByIngredients200ResponseInner>>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Set<SearchRecipesByIngredients200ResponseInner>>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -2019,7 +2019,7 @@ open class RecipesAPI {
      */
     open class func searchRecipesByNutrientsWithRequestBuilder(minCarbs: Double? = nil, maxCarbs: Double? = nil, minProtein: Double? = nil, maxProtein: Double? = nil, minCalories: Double? = nil, maxCalories: Double? = nil, minFat: Double? = nil, maxFat: Double? = nil, minAlcohol: Double? = nil, maxAlcohol: Double? = nil, minCaffeine: Double? = nil, maxCaffeine: Double? = nil, minCopper: Double? = nil, maxCopper: Double? = nil, minCalcium: Double? = nil, maxCalcium: Double? = nil, minCholine: Double? = nil, maxCholine: Double? = nil, minCholesterol: Double? = nil, maxCholesterol: Double? = nil, minFluoride: Double? = nil, maxFluoride: Double? = nil, minSaturatedFat: Double? = nil, maxSaturatedFat: Double? = nil, minVitaminA: Double? = nil, maxVitaminA: Double? = nil, minVitaminC: Double? = nil, maxVitaminC: Double? = nil, minVitaminD: Double? = nil, maxVitaminD: Double? = nil, minVitaminE: Double? = nil, maxVitaminE: Double? = nil, minVitaminK: Double? = nil, maxVitaminK: Double? = nil, minVitaminB1: Double? = nil, maxVitaminB1: Double? = nil, minVitaminB2: Double? = nil, maxVitaminB2: Double? = nil, minVitaminB5: Double? = nil, maxVitaminB5: Double? = nil, minVitaminB3: Double? = nil, maxVitaminB3: Double? = nil, minVitaminB6: Double? = nil, maxVitaminB6: Double? = nil, minVitaminB12: Double? = nil, maxVitaminB12: Double? = nil, minFiber: Double? = nil, maxFiber: Double? = nil, minFolate: Double? = nil, maxFolate: Double? = nil, minFolicAcid: Double? = nil, maxFolicAcid: Double? = nil, minIodine: Double? = nil, maxIodine: Double? = nil, minIron: Double? = nil, maxIron: Double? = nil, minMagnesium: Double? = nil, maxMagnesium: Double? = nil, minManganese: Double? = nil, maxManganese: Double? = nil, minPhosphorus: Double? = nil, maxPhosphorus: Double? = nil, minPotassium: Double? = nil, maxPotassium: Double? = nil, minSelenium: Double? = nil, maxSelenium: Double? = nil, minSodium: Double? = nil, maxSodium: Double? = nil, minSugar: Double? = nil, maxSugar: Double? = nil, minZinc: Double? = nil, maxZinc: Double? = nil, offset: Int? = nil, number: Int? = nil, random: Bool? = nil, limitLicense: Bool? = nil) -> RequestBuilder<Set<SearchRecipesByNutrients200ResponseInner>> {
         let localVariablePath = "/recipes/findByNutrients"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -2108,7 +2108,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<Set<SearchRecipesByNutrients200ResponseInner>>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Set<SearchRecipesByNutrients200ResponseInner>>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -2143,7 +2143,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -2154,7 +2154,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<SummarizeRecipe200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<SummarizeRecipe200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -2206,7 +2206,7 @@ open class RecipesAPI {
      */
     open class func visualizeEquipmentWithRequestBuilder(contentType: ContentType_visualizeEquipment? = nil, accept: Accept_visualizeEquipment? = nil) -> RequestBuilder<String> {
         let localVariablePath = "/recipes/visualizeEquipment"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -2219,7 +2219,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -2281,7 +2281,7 @@ open class RecipesAPI {
      */
     open class func visualizePriceBreakdownWithRequestBuilder(contentType: ContentType_visualizePriceBreakdown? = nil, accept: Accept_visualizePriceBreakdown? = nil, language: Language_visualizePriceBreakdown? = nil) -> RequestBuilder<String> {
         let localVariablePath = "/recipes/visualizePriceEstimator"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -2297,7 +2297,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -2334,7 +2334,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -2348,7 +2348,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -2395,7 +2395,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -2410,7 +2410,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -2472,7 +2472,7 @@ open class RecipesAPI {
      */
     open class func visualizeRecipeNutritionWithRequestBuilder(contentType: ContentType_visualizeRecipeNutrition? = nil, accept: Accept_visualizeRecipeNutrition? = nil, language: Language_visualizeRecipeNutrition? = nil) -> RequestBuilder<String> {
         let localVariablePath = "/recipes/visualizeNutrition"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -2488,7 +2488,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -2536,7 +2536,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -2550,7 +2550,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -2587,7 +2587,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -2601,7 +2601,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -2667,7 +2667,7 @@ open class RecipesAPI {
      */
     open class func visualizeRecipeTasteWithRequestBuilder(language: Language_visualizeRecipeTaste? = nil, contentType: ContentType_visualizeRecipeTaste? = nil, accept: Accept_visualizeRecipeTaste? = nil, normalize: Bool? = nil, rgb: String? = nil) -> RequestBuilder<String> {
         let localVariablePath = "/recipes/visualizeTaste"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -2685,7 +2685,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -2724,7 +2724,7 @@ open class RecipesAPI {
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -2739,7 +2739,7 @@ open class RecipesAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }

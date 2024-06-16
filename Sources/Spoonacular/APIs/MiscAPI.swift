@@ -48,7 +48,7 @@ open class MiscAPI {
      */
     open class func detectFoodInTextWithRequestBuilder(contentType: ContentType_detectFoodInText? = nil) -> RequestBuilder<DetectFoodInText200Response> {
         let localVariablePath = "/food/detect"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -60,7 +60,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<DetectFoodInText200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<DetectFoodInText200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -90,7 +90,7 @@ open class MiscAPI {
      */
     open class func getARandomFoodJokeWithRequestBuilder() -> RequestBuilder<GetARandomFoodJoke200Response> {
         let localVariablePath = "/food/jokes/random"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -101,7 +101,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetARandomFoodJoke200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetARandomFoodJoke200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -135,7 +135,7 @@ open class MiscAPI {
      */
     open class func getConversationSuggestsWithRequestBuilder(query: String, number: Double? = nil) -> RequestBuilder<GetConversationSuggests200Response> {
         let localVariablePath = "/food/converse/suggest"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -150,7 +150,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetConversationSuggests200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetConversationSuggests200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -180,7 +180,7 @@ open class MiscAPI {
      */
     open class func getRandomFoodTriviaWithRequestBuilder() -> RequestBuilder<GetRandomFoodTrivia200Response> {
         let localVariablePath = "/food/trivia/random"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -191,7 +191,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetRandomFoodTrivia200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetRandomFoodTrivia200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -223,7 +223,7 @@ open class MiscAPI {
      */
     open class func imageAnalysisByURLWithRequestBuilder(imageUrl: String) -> RequestBuilder<ImageAnalysisByURL200Response> {
         let localVariablePath = "/food/images/analyze"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -237,7 +237,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<ImageAnalysisByURL200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<ImageAnalysisByURL200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -269,7 +269,7 @@ open class MiscAPI {
      */
     open class func imageClassificationByURLWithRequestBuilder(imageUrl: String) -> RequestBuilder<ImageClassificationByURL200Response> {
         let localVariablePath = "/food/images/classify"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -283,7 +283,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<ImageClassificationByURL200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<ImageClassificationByURL200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -319,7 +319,7 @@ open class MiscAPI {
      */
     open class func searchAllFoodWithRequestBuilder(query: String, offset: Int? = nil, number: Int? = nil) -> RequestBuilder<SearchAllFood200Response> {
         let localVariablePath = "/food/search"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -335,7 +335,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<SearchAllFood200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<SearchAllFood200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -375,7 +375,7 @@ open class MiscAPI {
      */
     open class func searchCustomFoodsWithRequestBuilder(username: String, hash: String, query: String? = nil, offset: Int? = nil, number: Int? = nil) -> RequestBuilder<SearchCustomFoods200Response> {
         let localVariablePath = "/food/customFoods/search"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -393,7 +393,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<SearchCustomFoods200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<SearchCustomFoods200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -443,7 +443,7 @@ open class MiscAPI {
      */
     open class func searchFoodVideosWithRequestBuilder(query: String? = nil, type: String? = nil, cuisine: String? = nil, diet: String? = nil, includeIngredients: String? = nil, excludeIngredients: String? = nil, minLength: Double? = nil, maxLength: Double? = nil, offset: Int? = nil, number: Int? = nil) -> RequestBuilder<SearchFoodVideos200Response> {
         let localVariablePath = "/food/videos/search"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -466,7 +466,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<SearchFoodVideos200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<SearchFoodVideos200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -498,7 +498,7 @@ open class MiscAPI {
      */
     open class func searchSiteContentWithRequestBuilder(query: String) -> RequestBuilder<SearchSiteContent200Response> {
         let localVariablePath = "/food/site/search"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -512,7 +512,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<SearchSiteContent200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<SearchSiteContent200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -546,7 +546,7 @@ open class MiscAPI {
      */
     open class func talkToChatbotWithRequestBuilder(text: String, contextId: String? = nil) -> RequestBuilder<TalkToChatbot200Response> {
         let localVariablePath = "/food/converse"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -561,7 +561,7 @@ open class MiscAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<TalkToChatbot200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<TalkToChatbot200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }

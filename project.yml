@@ -1,6 +1,6 @@
-name: SpoonacularAPI
+name: Spoonacular
 targets:
-  SpoonacularAPI:
+  Spoonacular:
     type: framework
     platform: iOS
     deploymentTarget: "11.0"

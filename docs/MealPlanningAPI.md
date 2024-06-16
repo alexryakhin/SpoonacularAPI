@@ -32,7 +32,7 @@ Add a meal plan template for a user.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let hash = "hash_example" // String | The private hash for the username.
@@ -86,7 +86,7 @@ Add an item to the user's meal plan.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let hash = "hash_example" // String | The private hash for the username.
@@ -140,7 +140,7 @@ Add an item to the current shopping list of a user.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let hash = "hash_example" // String | The private hash for the username.
@@ -194,7 +194,7 @@ Delete all planned items from the user's meal plan for a specific day.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let date = "date_example" // String | The date in the format yyyy-mm-dd.
@@ -250,7 +250,7 @@ In order to call user-specific endpoints, you need to connect your app's users t
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let body = "TODO" // AnyCodable | 
 
@@ -300,7 +300,7 @@ Delete an item from the user's meal plan.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let id = 987 // Double | The shopping list item id.
@@ -356,7 +356,7 @@ Delete an item from the current shopping list of the user.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let id = 987 // Int | The item's id.
@@ -412,7 +412,7 @@ Delete a meal plan template for a user.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let id = 987 // Int | The item's id.
@@ -468,7 +468,7 @@ Generate a meal plan with three meals per day (breakfast, lunch, and dinner).
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let timeFrame = "timeFrame_example" // String | Either for one \"day\" or an entire \"week\". (optional)
 let targetCalories = 987 // Double | What is the caloric target for one day? The meal plan generator will try to get as close as possible to that goal. (optional)
@@ -524,7 +524,7 @@ Generate the shopping list for a user from the meal planner in a given time fram
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let startDate = "startDate_example" // String | The start date in the format yyyy-mm-dd.
@@ -582,7 +582,7 @@ Get information about a meal plan template.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let id = 987 // Int | The item's id.
@@ -636,7 +636,7 @@ Get meal plan templates from user or public ones.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let hash = "hash_example" // String | The private hash for the username.
@@ -688,7 +688,7 @@ Retrieve a meal planned week for the given user. The username must be a spoonacu
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let startDate = "startDate_example" // String | The start date of the meal planned week in the format yyyy-mm-dd.
@@ -742,7 +742,7 @@ Get the current shopping list for the given user.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let username = "username_example" // String | The username.
 let hash = "hash_example" // String | The private hash for the username.

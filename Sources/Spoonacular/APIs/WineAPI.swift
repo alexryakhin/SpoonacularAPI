@@ -39,7 +39,7 @@ open class WineAPI {
      */
     open class func getDishPairingForWineWithRequestBuilder(wine: String) -> RequestBuilder<GetDishPairingForWine200Response> {
         let localVariablePath = "/food/wine/dishes"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -53,7 +53,7 @@ open class WineAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetDishPairingForWine200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetDishPairingForWine200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -85,7 +85,7 @@ open class WineAPI {
      */
     open class func getWineDescriptionWithRequestBuilder(wine: String) -> RequestBuilder<GetWineDescription200Response> {
         let localVariablePath = "/food/wine/description"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -99,7 +99,7 @@ open class WineAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetWineDescription200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetWineDescription200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -133,7 +133,7 @@ open class WineAPI {
      */
     open class func getWinePairingWithRequestBuilder(food: String, maxPrice: Double? = nil) -> RequestBuilder<GetWinePairing200Response> {
         let localVariablePath = "/food/wine/pairing"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -148,7 +148,7 @@ open class WineAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetWinePairing200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetWinePairing200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }
@@ -186,7 +186,7 @@ open class WineAPI {
      */
     open class func getWineRecommendationWithRequestBuilder(wine: String, maxPrice: Double? = nil, minRating: Double? = nil, number: Double? = nil) -> RequestBuilder<GetWineRecommendation200Response> {
         let localVariablePath = "/food/wine/recommendation"
-        let localVariableURLString = SpoonacularAPIAPI.basePath + localVariablePath
+        let localVariableURLString = SpoonacularAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
@@ -203,7 +203,7 @@ open class WineAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetWineRecommendation200Response>.Type = SpoonacularAPIAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetWineRecommendation200Response>.Type = SpoonacularAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: true)
     }

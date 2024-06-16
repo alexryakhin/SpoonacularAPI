@@ -22,7 +22,7 @@ Find a dish that goes well with a given wine.
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let wine = "wine_example" // String | The type of wine that should be paired, e.g. \"merlot\", \"riesling\", or \"malbec\".
 
@@ -72,7 +72,7 @@ Get a simple description of a certain wine, e.g. \"malbec\", \"riesling\", or \"
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let wine = "wine_example" // String | The name of the wine that should be paired, e.g. \"merlot\", \"riesling\", or \"malbec\".
 
@@ -122,7 +122,7 @@ Find a wine that goes well with a food. Food can be a dish name (\"steak\"), an 
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let food = "food_example" // String | The food to get a pairing for. This can be a dish (\"steak\"), an ingredient (\"salmon\"), or a cuisine (\"italian\").
 let maxPrice = 987 // Double | The maximum price for the specific wine recommendation in USD. (optional)
@@ -174,7 +174,7 @@ Get a specific wine recommendation (concrete product) for a given wine type, e.g
 ### Example
 ```swift
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
-import SpoonacularAPI
+import Spoonacular
 
 let wine = "wine_example" // String | The type of wine to get a specific product recommendation for.
 let maxPrice = 987 // Double | The maximum price for the specific wine recommendation in USD. (optional)
